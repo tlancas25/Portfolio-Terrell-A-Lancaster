@@ -1,6 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { askResumeAgent } from '@/app/actions';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -22,7 +23,7 @@ function SubmitButton() {
 }
 
 export function ResumeAgent() {
-  const [state, formAction] = useFormState(askResumeAgent, initialState);
+  const [state, formAction] = useActionState(askResumeAgent, initialState);
 
   return (
     <section id="ai-agent">
