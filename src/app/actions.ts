@@ -14,7 +14,7 @@ const schema = z.object({
 // This function communicates with the Genkit flow running locally.
 // Ensure your Genkit server is running with `genkit:dev` or `genkit:watch`.
 async function fetchFromGenkit(query: string): Promise<string> {
-  const genkitUrl = process.env.GENKIT_API_URL || 'http://127.0.0.1:3400/flow/resumeAgentFlow';
+  const genkitUrl = process.env.GENKIT_API_URL || 'http://127.0.0.1:3400/flow/terrellChat';
   
   try {
     const response = await fetch(genkitUrl, {
@@ -22,7 +22,7 @@ async function fetchFromGenkit(query: string): Promise<string> {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ input: { query } }),
+      body: JSON.stringify({ input: { question: query } }),
     });
 
     if (!response.ok) {

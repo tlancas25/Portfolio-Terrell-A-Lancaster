@@ -22,47 +22,60 @@ const AIRecruiterAgentOutputSchema = z.object({
 export type AIRecruiterAgentOutput = z.infer<typeof AIRecruiterAgentOutputSchema>;
 
 export async function aiRecruiterAgent(input: AIRecruiterAgentInput): Promise<AIRecruiterAgentOutput> {
-  return aiRecruiterAgentFlow(input);
+  return terrellChat(input);
 }
 
-const resumeData = `{
-  "name": "Terrell A. Lancaster",
-  "title": "Cloud-Focused IT Operations Manager",
-  "summary": "Bridging the gap between Logistics and Cloud Architecture. U.S. Army Veteran with 9+ years of operational leadership pivoting to GCP solutions.",
-  "certifications": ["CompTIA Network+", "CompTIA A+", "Google Cybersecurity", "Google Project Management", "CDL Class A"],
-  "skills": {
-    "cloud": ["Google Cloud Platform", "Firebase", "Genkit", "Firestore", "IAM"],
-    "dev": ["React", "JavaScript", "Python", "VS Code", "Project IDX", "Manifest V3"],
-    "ops": ["Cisco Meraki", "SolarWinds", "Active Directory", "Hardware Support"]
-  },
-  "history": [
-    { "role": "Senior IT Manager", "company": "Drive On Transportation", "dates": "2022-2025", "desc": "Built 'Focus Freight' TMS. Migrated data to GCP Storage. Managed 99.9% uptime for ELDs." },
-    { "role": "Real Estate Team Lead", "company": "Simply Vegas", "dates": "2017-2022", "desc": "Salesforce CRM Admin. Web development for landing pages." },
-    { "role": "HR Ops Manager", "company": "U.S. Army", "dates": "2004-2012", "desc": "Managed systems for 1,500 personnel." }
-  ]
-}`
+const TERRELL_KNOWLEDGE = `
+Terrell A. Lancaster - Master Profile
+=====================================
+Military Service: 9 years U.S. Army, Secret Clearance
+- HR Operations Manager for 1,500+ personnel
+- Deployment: Operation Enduring Freedom
+- Awards: Army Commendation Medal, Good Conduct Medal
 
-const prompt = ai.definePrompt({
-  name: 'aiRecruiterAgentPrompt',
-  input: {schema: AIRecruiterAgentInputSchema},
-  output: {schema: AIRecruiterAgentOutputSchema},
-  prompt: `You are an AI Resume Agent expert in Terrell A. Lancaster's skills and experiences.
+Technical Expertise:
+- Cloud: GCP Architect (in progress), Firebase Expert
+- Languages: JavaScript/TypeScript, Python, Go
+- Frameworks: React, Next.js, Express, FastAPI
+- DevOps: Docker, Kubernetes, CI/CD, Terraform
+- Security: CompTIA Network+, Google Cybersecurity Cert
 
-  Use the following resume data to answer questions about Terrell:
-  ${resumeData}
+Professional Experience:
+- 300,000 miles OTR trucking (zero incidents)
+- Built Focus Freight TMS handling $2M annually
+- Real Estate Team Lead at Simply Vegas
+- Current: Senior IT Manager at Drive On Transportation
 
-  Question: {{{question}}}
-  Answer: `,
-});
+Project Highlights:
+- Focus Freight: React/Node.js TMS with 99.9% uptime
+- RedPill Insights: Chrome Extension with 5,000+ users
+- Due Process: AI legal tech processing 50,000+ documents
 
-const aiRecruiterAgentFlow = ai.defineFlow(
+Location: Las Vegas, NV
+Availability: Immediate for remote/hybrid roles
+Preferred Roles: Cloud Architect, DevOps Engineer, Technical Lead
+`;
+
+export const terrellChat = ai.defineFlow(
   {
-    name: 'aiRecruiterAgentFlow',
+    name: 'terrellChat',
     inputSchema: AIRecruiterAgentInputSchema,
     outputSchema: AIRecruiterAgentOutputSchema,
   },
-  async input => {
-    const {output} = await prompt(input);
-    return output!;
+  async ({ question }) => {
+    const prompt = `
+    You are an AI assistant representing Terrell A. Lancaster.
+    Use this knowledge base to answer questions:
+    ${TERRELL_KNOWLEDGE}
+    
+    Question: ${question}
+    
+    Respond professionally but with confidence.
+    Highlight relevant experience and metrics.
+    If asked about availability, mention immediate start capability.
+    `;
+
+    const response = await ai.generate({ prompt });
+    return { answer: response.text };
   }
 );

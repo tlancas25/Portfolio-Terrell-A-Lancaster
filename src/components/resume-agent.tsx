@@ -9,13 +9,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 
 const initialState = {
   message: '',
-  answer: 'Ask a question about my resume to get started. For example: "Does Terrell know Python?"',
+  answer: 'Ask a question about my resume to get started. For example: "What is your experience with GCP?"',
 };
 
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" size="icon" aria-label="Send question" disabled={pending}>
+    <Button type="submit" size="icon" aria-label="Send question" disabled={pending} className="bg-accent text-black hover:bg-accent/80">
       {pending ? <Loader className="animate-spin" /> : <Send />}
     </Button>
   );
@@ -26,21 +26,21 @@ export function ResumeAgent() {
 
   return (
     <section id="ai-agent">
-      <Card className="bg-secondary/20">
+      <Card className="bg-secondary/20 border-accent/20">
         <CardHeader>
           <div className="flex items-center gap-3">
             <div className="rounded-full border border-accent/50 bg-background p-2">
                 <Bot className="h-6 w-6 text-accent" />
             </div>
             <div>
-              <CardTitle className="font-headline text-2xl tracking-tight">AI Resume Agent</CardTitle>
-              <CardDescription>Your personal guide to my qualifications.</CardDescription>
+              <CardTitle className="font-stencil text-2xl tracking-wider">AI Resume Agent</CardTitle>
+              <CardDescription className="font-tactical">Your personal guide to my qualifications.</CardDescription>
             </div>
           </div>
         </CardHeader>
         <CardContent>
             <div className="mb-4 rounded-lg border bg-background p-4 min-h-[6rem] flex items-center">
-                <p className="text-sm text-muted-foreground">{state?.answer}</p>
+                <p className="text-sm font-mono text-muted-foreground">{state?.answer}</p>
             </div>
             {state?.message && <p className="mb-2 text-sm text-destructive">{state.message}</p>}
             <form action={formAction} className="flex w-full items-center space-x-2">
@@ -50,6 +50,7 @@ export function ResumeAgent() {
                 type="text"
                 placeholder="e.g., What is his cloud experience?"
                 required
+                className="font-mono"
                 />
                 <SubmitButton />
             </form>

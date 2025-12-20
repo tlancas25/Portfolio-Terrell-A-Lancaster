@@ -17,9 +17,12 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['"Space Grotesk"', 'sans-serif'],
-        code: ['monospace'],
+        body: ['var(--font-inter)', 'sans-serif'],
+        headline: ['var(--font-bebas-neue)', 'impact', 'sans-serif'],
+        terminal: ['var(--font-jetbrains-mono)', 'monospace'],
+        tactical: ['var(--font-inter)', 'sans-serif'],
+        stencil: ['var(--font-bebas-neue)', 'impact', 'sans-serif'],
+        mono: ['var(--font-jetbrains-mono)', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -55,6 +58,8 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        'alert-amber': 'hsl(var(--alert-amber))',
+        'tactical-blue': 'hsl(var(--tactical-blue))',
         chart: {
           '1': 'hsl(var(--chart-1))',
           '2': 'hsl(var(--chart-2))',

@@ -12,14 +12,14 @@ const categoryIcons = {
 export function Skills() {
   return (
     <section id="skills">
-      <h2 className="font-headline text-3xl font-bold tracking-tight">
+      <h2 className="font-stencil text-3xl font-bold tracking-wider">
         Technical Skills
       </h2>
       <div className="mt-4 grid gap-6 sm:grid-cols-1 md:grid-cols-3">
         {Object.entries(resumeData.skills).map(([category, skills]) => (
           <Card key={category} className="border-secondary bg-secondary/20">
             <CardHeader className="flex flex-row items-center justify-between pb-2">
-              <CardTitle className="text-lg font-medium capitalize">
+              <CardTitle className="text-lg font-tactical font-medium capitalize">
                 {category}
               </CardTitle>
               <div className="text-accent">
@@ -29,7 +29,7 @@ export function Skills() {
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
-                  <Badge key={skill} variant="outline" className="text-sm">
+                  <Badge key={skill} variant="outline" className="text-sm font-mono">
                     {skill}
                   </Badge>
                 ))}

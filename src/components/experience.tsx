@@ -3,7 +3,7 @@ import { resumeData } from '@/lib/data';
 export function Experience() {
   return (
     <section id="experience">
-      <h2 className="font-headline text-3xl font-bold tracking-tight">
+      <h2 className="font-stencil text-3xl font-bold tracking-wider">
         Logistics &amp; Ops Archive
       </h2>
       <div className="relative mt-6 pl-6">
@@ -14,9 +14,9 @@ export function Experience() {
               <div className="absolute -left-[37px] top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-background">
                 <div className="h-3 w-3 rounded-full bg-accent"></div>
               </div>
-              <p className="text-sm text-muted-foreground">{job.dates}</p>
-              <h3 className="text-xl font-semibold">{job.role}</h3>
-              <p className="font-medium text-primary/80">{job.company}</p>
+              <p className="text-sm font-mono text-muted-foreground">{job.dates}</p>
+              <h3 className="text-xl font-semibold font-tactical">{job.role}</h3>
+              <p className="font-medium text-primary/80 font-tactical">{job.company}</p>
               <p className="mt-2 text-muted-foreground">{job.desc}</p>
             </div>
           ))}
