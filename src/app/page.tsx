@@ -4,11 +4,14 @@ import { About } from '@/components/about';
 import { Skills } from '@/components/skills';
 import { Projects } from '@/components/projects';
 import { Experience } from '@/components/experience';
-import { ResumeAgent } from '@/components/resume-agent';
+// import { ResumeAgent } from '@/components/resume-agent';
 import { Footer } from '@/components/footer';
-import { Separator } from '@/components/ui/separator';
+import { projectsData } from '@/lib/data';
 
 export default function Home() {
+  // Reverting to manual data to avoid displaying sensitive GitHub projects until they are audited.
+  // The 'projectsData' import contains the manually curated list.
+  
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -17,9 +20,9 @@ export default function Home() {
           <Hero />
           <About />
           <Skills />
-          <Projects />
+          <Projects projects={projectsData} />
           <Experience />
-          <ResumeAgent />
+          {/* <ResumeAgent /> */}
         </div>
       </main>
       <Footer />
