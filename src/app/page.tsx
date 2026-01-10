@@ -7,13 +7,17 @@ import { Experience } from '@/components/experience';
 // import { ResumeAgent } from '@/components/resume-agent';
 import { Footer } from '@/components/footer';
 import { projectsData } from '@/lib/data';
+import { TacticalOverlay } from '@/components/ui/tactical-overlay';
 
 export default function Home() {
   // Reverting to manual data to avoid displaying sensitive GitHub projects until they are audited.
   // The 'projectsData' import contains the manually curated list.
   
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col system-frame">
+      {/* Tactical UI Overlays */}
+      <TacticalOverlay />
+      
       <Header />
       <main className="container mx-auto flex-1 px-4 py-8 md:px-6">
         <div className="mx-auto max-w-4xl space-y-16">

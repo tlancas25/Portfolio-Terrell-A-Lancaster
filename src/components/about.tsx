@@ -1,26 +1,30 @@
 import { resumeData } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Shield } from 'lucide-react';
 import Script from 'next/script';
 
 export function About() {
   return (
     <section id="about" className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8">
-      <div>
-        <h2 className="font-stencil text-3xl font-bold tracking-wider">
-          About
-        </h2>
-        <p className="mt-4 text-lg text-muted-foreground">{resumeData.summary}</p>
+      <div className="mission-node" data-hash="0xAB0UT_M3">
+        <div className="node-marker"></div>
+        <div className="flex items-center gap-2 mb-4">
+          <Shield className="h-5 w-5 text-tactical-blue" />
+          <h2 className="font-stencil text-3xl font-bold tracking-wider text-tactical-blue glow-blue uppercase">
+            Operative Briefing
+          </h2>
+        </div>
+        <p className="mt-4 text-lg text-muted-foreground leading-relaxed">{resumeData.summary}</p>
         <div className="mt-6">
-          <h3 className="text-xl font-semibold tracking-tight font-tactical">
-            Certifications
+          <h3 className="text-xl font-semibold tracking-tight font-tactical text-alert-amber uppercase">
+            Security Clearances
           </h3>
           <div className="mt-4 flex flex-wrap gap-2">
             {resumeData.certifications.map((cert) => (
-              <Badge key={cert} variant="secondary" className="gap-1.5 py-1 pr-3 text-sm font-mono">
-                  <CheckCircle2 className="h-4 w-4 text-accent" />
+              <span key={cert} className="tech-tag flex items-center gap-1.5">
+                  <CheckCircle2 className="h-3 w-3 text-accent" />
                   {cert}
-              </Badge>
+              </span>
             ))}
           </div>
         </div>
