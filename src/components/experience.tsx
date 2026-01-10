@@ -1,6 +1,6 @@
 import { resumeData } from '@/lib/data';
 import { Button } from './ui/button';
-import { Download, Crosshair } from 'lucide-react';
+import { Download, Crosshair, MapPin } from 'lucide-react';
 
 export function Experience() {
   return (
@@ -33,10 +33,13 @@ export function Experience() {
             <div className="border-l-2 border-tactical-blue/40 pl-4 mb-6">
                 <div className="text-tactical-blue font-bold text-lg md:text-xl tracking-wider glow-blue">{resumeData.identity.name.toUpperCase()}</div>
                 <div className="text-alert-amber font-medium">{resumeData.identity.title}</div>
-                <div className="text-xs mt-1 space-x-2">
+                <div className="text-xs mt-1 flex flex-wrap gap-x-2">
                     <span>[{resumeData.identity.location.city}, {resumeData.identity.location.state}]</span>
                     <span>::</span>
                     <span className="text-accent">[{resumeData.identity.clearance}]</span>
+                </div>
+                <div className="text-xs mt-2 text-muted-foreground">
+                  {resumeData.identity.secondaryTitles?.join(" • ")}
                 </div>
             </div>
 
@@ -50,18 +53,26 @@ export function Experience() {
                 </p>
             </div>
 
-            {/* EXPERTISE */}
+            {/* EXPERTISE - Updated for new data structure */}
             <div className="mb-6">
                 <div className="text-tactical-blue font-bold mb-2 uppercase tracking-wide text-xs">02 // Tactical Expertise</div>
-                <div className="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-y-2 pl-4 border-l border-tactical-blue/20">
-                    <span className="text-alert-amber font-bold">CYBER_SEC:</span>
-                    <span className="text-foreground/80">{resumeData.skills.cybersecurity.join(", ")}</span>
-                    
-                    <span className="text-alert-amber font-bold">IT_OPS:</span>
-                    <span className="text-foreground/80">{resumeData.skills.it_ops.join(", ")}</span>
-                    
-                    <span className="text-alert-amber font-bold">DEV_TOOLS:</span>
-                    <span className="text-foreground/80">{resumeData.skills.dev.join(", ")}</span>
+                <div className="grid grid-cols-1 gap-y-3 pl-4 border-l border-tactical-blue/20">
+                    <div>
+                      <span className="text-alert-amber font-bold block mb-1">CLOUD_OPS:</span>
+                      <span className="text-foreground/80 text-xs">{resumeData.skills.cloud.slice(0, 6).join(", ")}</span>
+                    </div>
+                    <div>
+                      <span className="text-alert-amber font-bold block mb-1">CYBER_SEC:</span>
+                      <span className="text-foreground/80 text-xs">{resumeData.skills.cybersecurity.slice(0, 6).join(", ")}</span>
+                    </div>
+                    <div>
+                      <span className="text-alert-amber font-bold block mb-1">DEV_STACK:</span>
+                      <span className="text-foreground/80 text-xs">{resumeData.skills.dev.slice(0, 6).join(", ")}</span>
+                    </div>
+                    <div>
+                      <span className="text-alert-amber font-bold block mb-1">IT_SUPPORT:</span>
+                      <span className="text-foreground/80 text-xs">{resumeData.skills.it_ops.slice(0, 6).join(", ")}</span>
+                    </div>
                 </div>
             </div>
 
@@ -74,12 +85,23 @@ export function Experience() {
                             {/* Decorative timeline dot */}
                             <div className="absolute -left-[21px] top-1.5 h-2 w-2 rounded-full bg-tactical-blue/50 group-hover:bg-accent transition-colors"></div>
                             
-                            <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-1">
+                            <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-1 gap-2">
                                 <span className="font-bold text-foreground text-base">{job.role}</span>
-                                <span className="text-alert-amber text-xs font-bold bg-alert-amber/10 px-2 py-0.5 rounded border border-alert-amber/20">[ {job.dates} ]</span>
+                                <span className="text-alert-amber text-xs font-bold bg-alert-amber/10 px-2 py-0.5 rounded border border-alert-amber/20 whitespace-nowrap">[ {job.dates} ]</span>
                             </div>
-                            <div className="text-sm text-tactical-blue/70 mb-2 uppercase tracking-tight">{job.company} // OPERATIONS DIV</div>
-                            <p className="text-sm leading-relaxed max-w-[80ch]">{job.desc}</p>
+                            <div className="flex items-center gap-2 text-sm text-tactical-blue/70 mb-2 uppercase tracking-tight">
+                              <span>{job.company}</span>
+                              {job.location && (
+                                <>
+                                  <span className="text-muted-foreground">|</span>
+                                  <span className="flex items-center gap-1 text-muted-foreground normal-case">
+                                    <MapPin className="h-3 w-3" />
+                                    {job.location}
+                                  </span>
+                                </>
+                              )}
+                            </div>
+                            <p className="text-xs leading-relaxed max-w-[80ch]">{job.desc}</p>
                         </div>
                     ))}
                 </div>
@@ -88,12 +110,26 @@ export function Experience() {
             {/* CERTIFICATIONS */}
             <div className="mb-6">
                 <div className="text-tactical-blue font-bold mb-2 uppercase tracking-wide text-xs">04 // Certifications</div>
-                <div className="flex flex-wrap gap-2 pl-4 border-l border-tactical-blue/20">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-4 border-l border-tactical-blue/20">
                     {resumeData.certifications.map((cert, i) => (
-                        <span key={i} className="tech-tag">
-                            {cert}
-                        </span>
+                        <div key={i} className="tech-tag flex justify-between items-center py-1.5">
+                            <span className="text-[10px]">{cert.name}</span>
+                            <span className="text-[9px] text-alert-amber ml-2">{cert.date}</span>
+                        </div>
                     ))}
+                </div>
+            </div>
+
+            {/* EDUCATION */}
+            <div className="mb-6">
+                <div className="text-tactical-blue font-bold mb-2 uppercase tracking-wide text-xs">05 // Education</div>
+                <div className="pl-4 border-l border-tactical-blue/20">
+                    <div className="font-bold text-foreground">{resumeData.education.degree}</div>
+                    <div className="text-sm text-tactical-blue/70">{resumeData.education.institution}</div>
+                    <div className="text-xs text-accent mt-1">{resumeData.education.status}</div>
+                    <div className="text-xs text-muted-foreground mt-2">
+                      <span className="text-alert-amber">Coursework:</span> {resumeData.education.coursework.join(", ")}
+                    </div>
                 </div>
             </div>
 
