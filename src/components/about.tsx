@@ -17,7 +17,7 @@ export function About() {
         <p className="mt-4 text-lg text-muted-foreground leading-relaxed">{resumeData.summary}</p>
         <div className="mt-6">
           <h3 className="text-xl font-semibold tracking-tight font-tactical text-alert-amber uppercase">
-            Security Clearances
+            Certifications
           </h3>
           <div className="mt-4 flex flex-wrap gap-2">
             {resumeData.certifications.map((cert) => (

@@ -87,7 +87,7 @@ export function Experience() {
 
             {/* CERTIFICATIONS */}
             <div className="mb-6">
-                <div className="text-tactical-blue font-bold mb-2 uppercase tracking-wide text-xs">04 // Security Clearances</div>
+                <div className="text-tactical-blue font-bold mb-2 uppercase tracking-wide text-xs">04 // Certifications</div>
                 <div className="flex flex-wrap gap-2 pl-4 border-l border-tactical-blue/20">
                     {resumeData.certifications.map((cert, i) => (
                         <span key={i} className="tech-tag">
