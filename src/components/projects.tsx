@@ -15,6 +15,7 @@ interface Project {
   description: string;
   techStack: string[];
   githubLink: string;
+  demoLink?: string;
   image: {
     id: string;
   };
@@ -131,10 +132,18 @@ export function Projects({ projects }: ProjectsProps) {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="border-t border-tactical-blue/10 bg-black/20 pt-4">
+                <CardFooter className="border-t border-tactical-blue/10 bg-black/20 pt-4 gap-2 flex-wrap">
+                  {project.demoLink && (
+                    <Button asChild variant="ghost" size="sm" className="flex-1 min-w-[120px] justify-between font-mono text-xs text-accent hover:bg-accent hover:text-black border border-accent/30">
+                      <Link href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                        <span className="flex items-center gap-2"><ExternalLink className="h-4 w-4" /> LIVE_DEMO</span>
+                        <ExternalLink className="h-3 w-3" />
+                      </Link>
+                    </Button>
+                  )}
                    <Dialog>
                       <DialogTrigger asChild>
-                        <Button variant="ghost" size="sm" className="w-full justify-between font-mono text-xs text-tactical-blue hover:bg-tactical-blue hover:text-black border border-tactical-blue/30">
+                        <Button variant="ghost" size="sm" className="flex-1 min-w-[120px] justify-between font-mono text-xs text-tactical-blue hover:bg-tactical-blue hover:text-black border border-tactical-blue/30">
                             <span className="flex items-center gap-2"><FileText className="h-4 w-4" /> VIEW_BRIEFING</span>
                             <ExternalLink className="h-3 w-3" />
                         </Button>

@@ -178,6 +178,7 @@ export const projectsData = [
         description: "A serverless logistics application built on GCP (Cloud Run, Firestore) to manage fleet dispatching and tracking. Features Role-Based Access Control via Firebase Auth, real-time asset monitoring, and automated compliance reporting.",
         techStack: ["GCP Cloud Run", "Firestore", "Firebase Auth", "RBAC", "CI/CD", "Serverless"],
         githubLink: "https://github.com/tlancas25",
+        demoLink: "https://studio--studio-5057392049-d8761.us-central1.hosted.app/",
         image: {
             id: "placeholder",
         },
