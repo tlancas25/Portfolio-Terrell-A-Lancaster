@@ -63,11 +63,6 @@ export function Projects({ projects }: ProjectsProps) {
                              <div className="mb-1 text-xs font-mono text-alert-amber">CASE_FILE_0{idx + 1}</div>
                             <CardTitle className="font-stencil text-2xl tracking-wide text-tactical-blue">{project.title}</CardTitle>
                         </div>
-                        {mainImage && (
-                           <div className="confidential-stamp text-[8px] relative top-0 right-0 transform-none p-1">
-                              CLASSIFIED
-                           </div>
-                        )}
                    </div>
                   <CardDescription className="font-mono text-xs pt-2 line-clamp-3">{project.description}</CardDescription>
                 </CardHeader>
@@ -141,6 +136,12 @@ export function Projects({ projects }: ProjectsProps) {
                       </Link>
                     </Button>
                   )}
+                  <Button asChild variant="ghost" size="sm" className="flex-1 min-w-[120px] justify-between font-mono text-xs text-muted-foreground hover:text-foreground border border-muted-foreground/30 hover:bg-muted-foreground/10">
+                      <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                        <span className="flex items-center gap-2"><Github className="h-4 w-4" /> CODE</span>
+                        <ExternalLink className="h-3 w-3" />
+                      </Link>
+                  </Button>
                    <Dialog>
                       <DialogTrigger asChild>
                         <Button variant="ghost" size="sm" className="flex-1 min-w-[120px] justify-between font-mono text-xs text-tactical-blue hover:bg-tactical-blue hover:text-black border border-tactical-blue/30">

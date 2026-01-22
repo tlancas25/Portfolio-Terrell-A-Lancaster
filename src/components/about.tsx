@@ -89,9 +89,13 @@ export function About() {
             <div key={cert.name} className="tech-tag flex items-center justify-between gap-2 py-2">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-3 w-3 text-accent flex-shrink-0" />
-                <span className="text-xs">{cert.name}</span>
+                <div className="flex flex-col">
+                    <span className="text-xs">{cert.name}</span>
+                    <span className="text-[10px] text-muted-foreground flex items-center gap-1">
+                        <span className="text-accent">✓ {cert.status}</span> • {cert.date}
+                    </span>
+                </div>
               </div>
-              <span className="text-[10px] text-alert-amber">{cert.date}</span>
             </div>
           ))}
         </div>

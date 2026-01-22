@@ -4,6 +4,7 @@ import { About } from '@/components/about';
 import { Skills } from '@/components/skills';
 import { Projects } from '@/components/projects';
 import { Experience } from '@/components/experience';
+import { Contact } from '@/components/contact';
 // import { ResumeAgent } from '@/components/resume-agent';
 import { Footer } from '@/components/footer';
 import { projectsData } from '@/lib/data';
@@ -26,6 +27,7 @@ export default function Home() {
           <Skills />
           <Projects projects={projectsData} />
           <Experience />
+          <Contact />
           {/* <ResumeAgent /> */}
         </div>
       </main>

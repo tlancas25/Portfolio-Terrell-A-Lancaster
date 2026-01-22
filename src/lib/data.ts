@@ -1,10 +1,10 @@
 export const resumeData = {
   identity: {
     name: "Terrell A. Lancaster",
-    title: "Cloud-Focused IT Operations Manager & Security Analyst",
+    title: "Cloud Security Engineer & Full-Stack Developer",
     secondaryTitles: ["U.S. Army Veteran", "Former Business Owner", "Cloud Architect Candidate"],
     brand: "The Operational Defender",
-    tagline: "Bridging physical logistics and digital cloud infrastructure with 'No Geek-Speak' communication and 15-minute SLA adherence.",
+    tagline: "Securing Infrastructure. Shipping Code. Zero Downtime.",
     clearance: "Former Secret (Eligible for Reinstatement - TS Capable)",
     location: {
       city: "Las Vegas",
@@ -15,7 +15,7 @@ export const resumeData = {
     }
   },
   metrics: {
-    yearsExperience: 20,
+    yearsExperience: "9+ (IT) / 8 (Mil)",
     projectsDelivered: 47,
     teamSize: 1500,
     milesDriven: 300000,
@@ -37,7 +37,7 @@ export const resumeData = {
       year: 2025
     },
     {
-      title: "Focus Freight TMS Development",
+      title: "Fretum-Freight TMS Development",
       impact: "Built serverless logistics app on GCP (Cloud Run/Firestore) with RBAC via Firebase Auth",
       year: 2023
     },
@@ -52,16 +52,16 @@ export const resumeData = {
       year: 2022
     }
   ],
-  summary: "U.S. Army Veteran and IT Operations Manager with 20+ years of leadership experience. Currently pursuing B.S. in Cybersecurity at WGU while building cloud-native applications on Google Cloud Platform. Known as 'The Operational Defender' for bridging physical operations with digital infrastructure. Combines hands-on technical skills (pull cable, configure switch, secure network, write code) with business ownership mindset. Seeking Cloud Security, IT Operations, or SOC Analyst roles where reliability and 24/7 operational discipline are valued.",
+  summary: "Cloud Security Engineer and Full-Stack Developer with 9+ years building secure, scalable systems. U.S. Army veteran (8 years, Secret clearance) with proven 24/7 operational discipline. Currently completing B.S. in Cybersecurity at WGU. Specializes in GCP cloud architecture, DevSecOps pipelines, and AI-integrated applications. Known for 'no geek-speak' communication and 15-minute SLA adherence.",
   certifications: [
-    { name: "CompTIA Security+ (SY0-701)", date: "Jan 2026", focus: "Risk Mgmt, Cryptography, Identity Mgmt" },
-    { name: "CompTIA Network+", date: "Dec 2025", focus: "TCP/IP, Subnetting, Troubleshooting" },
-    { name: "CompTIA A+ (Core 1 & 2)", date: "Dec 2025", focus: "Hardware, OS, Mobile Devices" },
-    { name: "ITIL® 4 Foundation", date: "Dec 2025", focus: "ITSM, Service Desk Operations, SLAs" },
-    { name: "Google Project Management", date: "Apr 2025", focus: "Agile, Scrum, Project Lifecycle" },
-    { name: "Google Cybersecurity Professional", date: "Apr 2025", focus: "Security Operations, Threat Analysis" },
-    { name: "Google IT Support Professional", date: "Apr 2025", focus: "Technical Support, Troubleshooting" },
-    { name: "CDL Class A", date: "Aug 2022", focus: "HazMat, Tanker, Air Brakes Endorsements" }
+    { name: "CompTIA Security+ (SY0-701)", date: "Jan 2026", focus: "Risk Mgmt, Cryptography, Identity Mgmt", status: "Active" },
+    { name: "CompTIA Network+", date: "Dec 2025", focus: "TCP/IP, Subnetting, Troubleshooting", status: "Active" },
+    { name: "CompTIA A+ (Core 1 & 2)", date: "Dec 2025", focus: "Hardware, OS, Mobile Devices", status: "Active" },
+    { name: "ITIL® 4 Foundation", date: "Dec 2025", focus: "ITSM, Service Desk Operations, SLAs", status: "Active" },
+    { name: "Google Project Management", date: "Apr 2025", focus: "Agile, Scrum, Project Lifecycle", status: "Active" },
+    { name: "Google Cybersecurity Professional", date: "Apr 2025", focus: "Security Operations, Threat Analysis", status: "Active" },
+    { name: "Google IT Support Professional", date: "Apr 2025", focus: "Technical Support, Troubleshooting", status: "Active" },
+    { name: "CDL Class A", date: "Aug 2022", focus: "HazMat, Tanker, Air Brakes Endorsements", status: "Active" }
   ],
   skills: {
     cloud: [
@@ -127,10 +127,6 @@ export const resumeData = {
     {
       title: "Proven Reliability",
       description: "U.S. Army discipline + 300,000 miles accident-free OTR driving. Thrives in NightOps and 24/7 environments."
-    },
-    {
-      title: "Physical Capability",
-      description: "Physically fit, willing to lift 50lbs, comfortable in warehouses, construction sites, or luxury resorts."
     }
   ],
   history: [
@@ -173,11 +169,11 @@ export const resumeData = {
 
 export const projectsData = [
     {
-        id: "focus-freight-tms",
-        title: "Focus Freight TMS",
+        id: "fretum-freight-tms",
+        title: "Fretum-Freight TMS",
         description: "A serverless logistics application built on GCP (Cloud Run, Firestore) to manage fleet dispatching and tracking. Features Role-Based Access Control via Firebase Auth, real-time asset monitoring, and automated compliance reporting.",
         techStack: ["GCP Cloud Run", "Firestore", "Firebase Auth", "RBAC", "CI/CD", "Serverless"],
-        githubLink: "https://github.com/tlancas25",
+        githubLink: "https://github.com/tlancas25/Fretum-Freight-TM",
         demoLink: "https://studio--studio-5057392049-d8761.us-central1.hosted.app/",
         image: {
             id: "placeholder",

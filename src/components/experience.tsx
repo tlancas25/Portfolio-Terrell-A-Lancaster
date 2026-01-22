@@ -113,8 +113,11 @@ export function Experience() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-4 border-l border-tactical-blue/20">
                     {resumeData.certifications.map((cert, i) => (
                         <div key={i} className="tech-tag flex justify-between items-center py-1.5">
-                            <span className="text-[10px]">{cert.name}</span>
-                            <span className="text-[9px] text-alert-amber ml-2">{cert.date}</span>
+                            <div className="flex flex-col">
+                                <span className="text-[10px]">{cert.name}</span>
+                                <span className="text-[9px] text-accent">✓ {cert.status}</span>
+                            </div>
+                            <span className="text-[9px] text-muted-foreground ml-2">{cert.date}</span>
                         </div>
                     ))}
                 </div>
@@ -133,31 +136,7 @@ export function Experience() {
                 </div>
             </div>
 
-             <div className="mt-8 pt-4 border-t border-tactical-blue/20 space-y-4">
-                <div className="flex items-center gap-2">
-                    <span className="text-accent">agent@secure_terminal:~$</span>
-                    <span>wget --output-document=dossier.pdf secure_vault/terrell_lancaster.pdf</span>
-                </div>
-                
-                <div className="pl-4 border-l-2 border-tactical-blue/50 animate-in fade-in duration-1000">
-                    <div className="text-xs text-muted-foreground mb-2">
-                        Resolving host... <span className="text-accent">OK</span><br/>
-                        Connecting to secure_vault... <span className="text-accent">ENCRYPTED</span><br/>
-                        HTTP request sent, awaiting response... <span className="text-tactical-blue">200 OK</span><br/>
-                    </div>
-                    <Button asChild variant="outline" size="sm" className="gap-2 font-mono text-xs border-tactical-blue text-tactical-blue hover:bg-tactical-blue hover:text-black">
-                        <a href="/resume.pdf" download="Terrell_Lancaster_Resume.pdf" target="_blank" rel="noopener noreferrer">
-                            <Download className="h-4 w-4" />
-                            EXTRACT_FILE [1.2MB]
-                        </a>
-                    </Button>
-                </div>
 
-                <div className="flex items-center gap-2">
-                    <span className="text-accent">agent@secure_terminal:~$</span>
-                    <span className="w-2 h-4 bg-tactical-blue/50 animate-pulse block"></span>
-                </div>
-            </div>
         </div>
       </div>
     </section>
