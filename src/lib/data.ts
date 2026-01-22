@@ -131,6 +131,13 @@ export const resumeData = {
   ],
   history: [
     {
+      role: "Full-Stack Developer & Cloud Architect",
+      company: "FRETUM-FREIGHT TMS",
+      location: "Las Vegas, NV",
+      dates: "Jan 2025 — Present",
+      desc: "Lead Architect for enterprise Transportation Management System. Building scalable, serverless infrastructure on Google Cloud Platform (Cloud Run, Firestore) with Next.js 15. Integrating AI-driven workflows for document processing and predictive analytics. 40+ hrs/wk dedicated development."
+    },
+    {
       role: "IT Operations Manager & Cloud Architect",
       company: "Drive On Transportation LLC",
       location: "Las Vegas, NV",
