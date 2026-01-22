@@ -1,0 +1,1 @@
+gcloud logging read 'resource.type="cloud_build_build" AND timestamp>="2026-01-22T00:00:00Z" AND timestamp<="2026-01-22T23:59:59Z"' > build_logs.jsonl
