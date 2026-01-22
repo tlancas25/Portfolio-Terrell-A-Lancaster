@@ -1,5 +1,3 @@
-import { Octokit } from "octokit"; // You might need to install this or use fetch
-
 // Basic fetch implementation since we don't want to add heavy dependencies just yet
 export async function fetchGitHubProjects(username: string) {
   try {

@@ -1,8 +1,8 @@
 # Terrell Lancaster | Full-Stack Software Engineer
 
 [![Security+](https://img.shields.io/badge/CompTIA-Security%2B-red)](https://www.comptia.org/certifications/security)
-[![DoD 8140](https://img.shields.io/badge/DoD-8140%20IAT%20II-blue)]()
-[![Clearance](https://img.shields.io/badge/Clearance-TS%20Eligible-green)]()
+![DoD 8140](https://img.shields.io/badge/DoD-8140%20IAT%20II-blue)
+![Clearance](https://img.shields.io/badge/Clearance-TS%20Eligible-green)
 
 ## 👋 About Me
 
@@ -17,6 +17,7 @@ Currently pursuing B.S. in Cybersecurity & Information Assurance at WGU.
 ## 🛠️ Technical Skills
 
 ### Languages & Frameworks
+
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
@@ -24,11 +25,13 @@ Currently pursuing B.S. in Cybersecurity & Information Assurance at WGU.
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
 
 ### Cloud & Infrastructure
+
 ![GCP](https://img.shields.io/badge/-Google%20Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
 ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 ### Security
+
 ![OAuth](https://img.shields.io/badge/-OAuth%202.0-000000?style=flat-square)
 ![WAF](https://img.shields.io/badge/-Cloud%20Armor%20WAF-4285F4?style=flat-square)
 ![NIST](https://img.shields.io/badge/-NIST%20RMF-003366?style=flat-square)
@@ -38,6 +41,7 @@ Currently pursuing B.S. in Cybersecurity & Information Assurance at WGU.
 ## 🚀 Featured Projects
 
 ### 1. FRETUM-FREIGHT TMS
+
 **Enterprise Transportation Management System**
 
 Cloud-native SaaS platform for freight and logistics industry.
@@ -52,6 +56,7 @@ Cloud-native SaaS platform for freight and logistics industry.
 ---
 
 ### 2. ScoreTrack
+
 **[Brief description of this project]**
 
 - **Tech:** [List technologies]
