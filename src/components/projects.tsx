@@ -129,24 +129,24 @@ export function Projects({ projects }: ProjectsProps) {
                 </CardContent>
                 <CardFooter className="border-t border-tactical-blue/10 bg-black/20 pt-4 gap-2 flex-wrap">
                   {project.demoLink && (
-                    <Button asChild variant="ghost" size="sm" className="flex-1 min-w-[120px] justify-between font-mono text-xs text-accent hover:bg-accent hover:text-black border border-accent/30">
+                    <Button asChild variant="ghost" size="sm" className="flex-1 min-w-[90px] justify-center font-mono text-[11px] text-accent hover:bg-accent hover:text-black border border-accent/30 h-8">
                       <Link href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                        <span className="flex items-center gap-2"><ExternalLink className="h-4 w-4" /> LIVE_DEMO</span>
-                        <ExternalLink className="h-3 w-3" />
+                        <ExternalLink className="mr-2 h-3 w-3" />
+                        DEMO
                       </Link>
                     </Button>
                   )}
-                  <Button asChild variant="ghost" size="sm" className="flex-1 min-w-[120px] justify-between font-mono text-xs text-muted-foreground hover:text-foreground border border-muted-foreground/30 hover:bg-muted-foreground/10">
+                  <Button asChild variant="ghost" size="sm" className="flex-1 min-w-[90px] justify-center font-mono text-[11px] text-muted-foreground hover:text-foreground border border-muted-foreground/30 hover:bg-muted-foreground/10 h-8">
                       <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                        <span className="flex items-center gap-2"><Github className="h-4 w-4" /> CODE</span>
-                        <ExternalLink className="h-3 w-3" />
+                        <Github className="mr-2 h-3 w-3" />
+                        CODE
                       </Link>
                   </Button>
                    <Dialog>
                       <DialogTrigger asChild>
-                        <Button variant="ghost" size="sm" className="flex-1 min-w-[120px] justify-between font-mono text-xs text-tactical-blue hover:bg-tactical-blue hover:text-black border border-tactical-blue/30">
-                            <span className="flex items-center gap-2"><FileText className="h-4 w-4" /> VIEW_BRIEFING</span>
-                            <ExternalLink className="h-3 w-3" />
+                        <Button variant="ghost" size="sm" className="flex-1 min-w-[90px] justify-center font-mono text-[11px] text-tactical-blue hover:bg-tactical-blue hover:text-black border border-tactical-blue/30 h-8">
+                            <FileText className="mr-2 h-3 w-3" />
+                            INFO
                         </Button>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl bg-black/95 border-tactical-blue/50 text-foreground font-mono max-h-[90vh] p-0 overflow-hidden">

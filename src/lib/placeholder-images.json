@@ -19,10 +19,64 @@
       "imageHint": "A futuristic server room with glowing lights."
     },
     {
-        "id": "scoretrack-crm-image",
-        "description": "ScoreTrack CRM Dashboard",
-        "imageUrl": "/scoretrack.png",
-        "imageHint": "A modern credit repair CRM dashboard with dark mode UI."
+        "id": "scoretrack-1",
+        "description": "ScoreTrack CRM Dashboard Main",
+        "imageUrl": "/images/projects/scoretrack/scoretrack-1.png",
+        "imageHint": "ScoreTrack CRM Dashboard showing credit score analysis."
+    },
+    {
+        "id": "scoretrack-2",
+        "description": "ScoreTrack CRM Login Screen",
+        "imageUrl": "/images/projects/scoretrack/scoretrack-2.png",
+        "imageHint": "Secure login screen for ScoreTrack CRM."
+    },
+    {
+        "id": "scoretrack-3",
+        "description": "ScoreTrack CRM Dashboard Analytics",
+        "imageUrl": "/images/projects/scoretrack/scoretrack-3.png",
+        "imageHint": "Detailed analytics view of ScoreTrack CRM."
+    },
+    {
+        "id": "fretum-freight-1",
+        "description": "Fretum-Freight TMS Dashboard",
+        "imageUrl": "/images/projects/fretum-freight-tms/fretumfreight-1.png",
+        "imageHint": "Main dashboard for Fretum-Freight TMS."
+    },
+    {
+        "id": "fretum-freight-2",
+        "description": "Fretum-Freight TMS Load Board",
+        "imageUrl": "/images/projects/fretum-freight-tms/fretumfreight-2.png",
+        "imageHint": "Load management interface."
+    },
+    {
+        "id": "fretum-freight-3",
+        "description": "Fretum-Freight TMS Dispatch",
+        "imageUrl": "/images/projects/fretum-freight-tms/fretumfreight-3.png",
+        "imageHint": "Dispatch management screen."
+    },
+    {
+        "id": "fretum-freight-4",
+        "description": "Fretum-Freight TMS Tracking",
+        "imageUrl": "/images/projects/fretum-freight-tms/fretumfreight-4.png",
+        "imageHint": "Real-time shipment tracking."
+    },
+    {
+        "id": "fretum-freight-5",
+        "description": "Fretum-Freight TMS Analytics",
+        "imageUrl": "/images/projects/fretum-freight-tms/fretumfreight-5.png",
+        "imageHint": "Financial analytics and reporting."
+    },
+    {
+        "id": "fretum-freight-6",
+        "description": "Fretum-Freight TMS Document Management",
+        "imageUrl": "/images/projects/fretum-freight-tms/fretumfreight-6.png",
+        "imageHint": "Document storage and AI processing."
+    },
+    {
+        "id": "fretum-freight-7",
+        "description": "Fretum-Freight TMS Settings",
+        "imageUrl": "/images/projects/fretum-freight-tms/fretumfreight-7.png",
+        "imageHint": "System configuration and user settings."
     }
   ]
 }

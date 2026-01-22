@@ -176,9 +176,17 @@ export const projectsData = [
         githubLink: "https://github.com/tlancas25/Fretum-Freight-TM",
         demoLink: "https://studio--studio-5057392049-d8761.us-central1.hosted.app/",
         image: {
-            id: "placeholder",
+            id: "fretum-freight-1",
         },
-        gallery: []
+        gallery: [
+            "fretum-freight-1",
+            "fretum-freight-2",
+            "fretum-freight-3",
+            "fretum-freight-4",
+            "fretum-freight-5",
+            "fretum-freight-6",
+            "fretum-freight-7"
+        ]
     },
     {
         id: "scoretrack-crm",
@@ -187,10 +195,12 @@ export const projectsData = [
         techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Firebase", "Python", "AI Integration"],
         githubLink: "https://github.com/tlancas25/trackr-333-score",
         image: {
-            id: "scoretrack-crm-image",
+            id: "scoretrack-1",
         },
         gallery: [
-            "scoretrack-crm-image"
+            "scoretrack-1",
+            "scoretrack-2",
+            "scoretrack-3"
         ]
     }
 ];
